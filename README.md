@@ -25,3 +25,18 @@ Dari sisi struktur folder, seluruh kode diatur dengan terstruktur. File utama ma
 Aplikasi ini juga menyertakan dukungan unit test sederhana dengan menguji tampilan halaman login. Test tersebut dibuat ulang dari test bawaan Flutter sehingga menyesuaikan dengan struktur aplikasi yang sebenarnya, bukan lagi test counter bawaan dari proyek Flutter default.
 
 Secara keseluruhan, proyek h1d023010_tugas7 berhasil menerapkan seluruh poin utama yang diminta dalam tugas, yaitu penggunaan routes, pembuatan side menu, implementasi halaman login dengan penyimpanan data lokal, dan navigasi antar halaman. Selain itu, aplikasi ini juga memiliki desain antarmuka yang lebih menarik dan struktur kode yang lebih profesional, sehingga dapat menjadi dasar yang baik untuk pengembangan aplikasi Flutter yang lebih kompleks di masa mendatang.
+
+Aplikasi h1d023010_tugas7 adalah aplikasi Flutter sederhana yang menerapkan:
+
+  Named Routes → navigasi menggunakan rute bawaan Flutter  
+  Side Menu (Drawer) → navigasi utama di dalam aplikasi  
+  Login Page → validasi sederhana dengan akun dummy  
+  Local Storage (SharedPreferences) → menyimpan:  
+  Status login (isLoggedIn)  
+  Username  
+  Nama lengkap di halaman profil  
+  Dashboard (HomePage) → halaman utama setelah login
+  ProfilePage → mengubah nama lengkap yang disimpan ke local storage
+  SettingsPage → halaman pengaturan sederhana
+  
+Aplikasi mendemonstrasikan bagaimana Flutter mengelola rute, state login, dan penyimpanan data lokal.
