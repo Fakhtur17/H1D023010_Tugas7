@@ -40,3 +40,84 @@ Aplikasi h1d023010_tugas7 adalah aplikasi Flutter sederhana yang menerapkan:
   SettingsPage → halaman pengaturan sederhana
   
 Aplikasi mendemonstrasikan bagaimana Flutter mengelola rute, state login, dan penyimpanan data lokal.
+
+Penjelasan Detail Setiap Bagian Kode
+
+#main.dart
+
+Berfungsi sebagai root aplikasi.
+Fitur utama:
+Mengecek status login dari SharedPreferences
+Menampilkan loading jika data masih dibaca
+Menentukan halaman awal (home:) sesuai login
+Mendaftarkan seluruh named routes
+home: _isLoggedIn ? const HomePage() : const LoginPage()
+Dengan pendekatan ini, aplikasi tidak lagi memakai initialRoute, sehingga tidak terjadi error rute null.
+
+**login_page.dart**
+
+Halaman ini:
+Memiliki form login dengan username dan password
+Validasi input
+Membandingkan dengan akun dummy:
+Username: student
+Password: 12345
+Jika login benar:
+Menyimpan:
+isLoggedIn = true
+username
+Mengarahkan ke /home
+Menampilkan indikator loading & snackbar
+Jika salah:
+Mengeluarkan pesan error
+Ini mempraktikkan:
+✔ Form + Validator
+✔ SnackBar
+✔ SharedPreferences
+✔ Navigasi ke halaman lain
+
+**app_drawer.dart (Side Menu)**
+
+Drawer ini muncul di setiap halaman utama setelah login.
+Isi menu:
+Dashboard
+Profil
+Pengaturan
+Logout
+Pada bagian logout:
+await prefs.clear();
+Navigator.pushNamedAndRemoveUntil(context, '/login', (route) => false);
+Fungsinya:
+Menghapus semua data login
+Membersihkan riwayat halaman
+Mengarahkan kembali ke login
+
+**home_page.dart**
+
+Halaman dashboard yang menyapa user:
+Halo, {username} 👋
+Terdapat 4 card menu:
+Profil
+Pengaturan
+Info Tugas
+Logout
+Menggunakan:
+GridView
+Card UI modern
+Navigasi via named routes
+
+**profile_page.dart**
+
+Halaman ini membaca:
+username dari SharedPreferences
+namaLengkap dari SharedPreferences
+User bisa mengubah nama lengkap, lalu menyimpannya ke local storage.
+Ini mempraktikkan penyimpanan data lokal selain login, bukan hanya status akun.
+
+**settings_page.dart**
+
+Halaman pengaturan sederhana.
+Berisi:
+SwitchListTile untuk notifikasi
+Informasi aplikasi
+Halaman ini menunjukkan contoh UI lain yang memanfaatkan drawer dan route.
