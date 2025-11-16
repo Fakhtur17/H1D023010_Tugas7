@@ -1,30 +1,23 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:h1d023010_tugas7/main.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
+  testWidgets('Halaman login tampil', (WidgetTester tester) async {
+    // Build aplikasi
     await tester.pumpWidget(const H1D023010Tugas7App());
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    // Cek apakah halaman login muncul
+    expect(find.text('h1d023010_tugas7 Login'), findsOneWidget);
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+    // Cek tombol LOGIN ada
+    expect(find.text('LOGIN'), findsOneWidget);
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    // Cek input username ada
+    expect(find.byIcon(Icons.person_outline), findsOneWidget);
+
+    // Cek input password ada
+    expect(find.byIcon(Icons.lock_outline), findsOneWidget);
   });
 }
