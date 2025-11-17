@@ -145,3 +145,11 @@ File profile_page.dart menyajikan halaman yang berfungsi untuk menampilkan dan m
 Penjelasan file settings_page.dart
 
 File settings_page.dart merupakan halaman pengaturan sederhana yang berfungsi sebagai contoh penerapan komponen UI tambahan dalam aplikasi Flutter. Halaman ini memuat elemen SwitchListTile yang digunakan untuk menyalakan atau mematikan pengaturan notifikasi tugas. Meskipun pengaturan ini belum terhubung ke fungsi nyata, kehadirannya memberikan gambaran bagaimana state dapat dikelola di dalam sebuah halaman pengaturan. Selain itu, halaman ini berisi informasi tambahan mengenai aplikasi dan tujuan pembuatannya. Semua elemen dalam halaman ini tetap menggunakan Drawer sehingga pengguna dapat berpindah ke halaman lain dengan mudah.
+
+<img width="793" height="886" alt="image" src="https://github.com/user-attachments/assets/2433cd68-9598-42d3-ac64-de524e1ef0ad" />
+<img width="792" height="888" alt="image" src="https://github.com/user-attachments/assets/278e7d4b-96c1-47f6-a5af-a1e0304821ed" />
+<img width="789" height="883" alt="image" src="https://github.com/user-attachments/assets/8611bf10-9963-4c05-8058-e5c1160bb5d5" />
+
+
+
+
